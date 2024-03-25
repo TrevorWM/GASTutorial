@@ -23,7 +23,7 @@ public:
 
 	// override needed for GAS, AttributeSet one is a nice to have on top of that
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
-	UAttributeSet* GetAttributeSet() { return AttributeSet; }
+	UAttributeSet* GetAttributeSet() const { return AttributeSet; }
 
 protected:
 	UPROPERTY()
