@@ -5,6 +5,10 @@
 #include "AbilitySystemComponent.h"
 #include "Net/UnrealNetwork.h"
 
+UAuraAttributeSet::UAuraAttributeSet()
+{
+}
+
 void UAuraAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
