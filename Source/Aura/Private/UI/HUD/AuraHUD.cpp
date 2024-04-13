@@ -12,6 +12,10 @@ UOverlayWidgetController* AAuraHUD::GetOverlayWidgetController(const FWWidgetCon
 	{
 		OverlayWidgetController = NewObject<UOverlayWidgetController>(this, OverlayWidgetControllerClass);
 		OverlayWidgetController->SetWidgetControllerParams(WCParams);
+
+		// Better to bind callbacks here as it's when the controller is constructed, and we know we
+		// can bind things here already rather than waiting for the visual portion to be set up.
+		OverlayWidgetController->BindCallbacksToDependencies();
 	}
 	return OverlayWidgetController;
 }
@@ -34,6 +38,6 @@ void AAuraHUD::InitOverlay(APlayerController* PController, APlayerState* PState,
 
 	// Tell the OverlayWidget about the controller
 	OverlayWidget->SetWidgetController(WidgetController);
-	
+	WidgetController->BroadcastInitialValues();
 	Widget->AddToViewport();
 }

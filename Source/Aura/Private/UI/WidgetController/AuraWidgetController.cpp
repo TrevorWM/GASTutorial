@@ -10,3 +10,13 @@ void UAuraWidgetController::SetWidgetControllerParams(const FWWidgetControllerPa
 	AbilitySystemComponent = WCParams.AbilitySystemComponent;
 	AttributeSet = WCParams.AttributeSet;
 }
+
+void UAuraWidgetController::BroadcastInitialValues()
+{
+	//Blank for children to override
+}
+
+void UAuraWidgetController::BindCallbacksToDependencies()
+{
+	//Blank for children to override
+}
