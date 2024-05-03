@@ -27,6 +27,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void InitAbilityActorInfo();
+	
 	//TObjectPtrs are being used more. Allow lazy loading. Typically used for member variables
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	TObjectPtr<USkeletalMeshComponent> Weapon;
