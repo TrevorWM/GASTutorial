@@ -1,9 +1,9 @@
 // Copyright Me :)
 
 
-#include "GameFramework/Character.h"
-#include "AbilitySystem/AuraAttributeSet.h"
 
+#include "AbilitySystem/AuraAttributeSet.h"
+#include "GameFramework/Character.h"
 #include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystemComponent.h"
 #include "Net/UnrealNetwork.h"
